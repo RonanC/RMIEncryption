@@ -25,7 +25,7 @@ public class KeyEnumerator {
 	}
 	
 	
-	public void crackCypher(String cypherText, int maxKeyLength){
+	public String crackCypher(String cypherText, int maxKeyLength){
 		char[] key = null;
 		
 		int counter = 0;
@@ -50,6 +50,8 @@ public class KeyEnumerator {
 		System.out.println("Enumerated " + counter + " keys.");
 		String yahoo = new Vigenere(bestKey).doCypher("TVHUGTUDHKOURUGTS", false);
 		System.out.println(yahoo);
+		
+		return yahoo;
 	}
 	
 	public static void main(String[] args) throws Exception {
