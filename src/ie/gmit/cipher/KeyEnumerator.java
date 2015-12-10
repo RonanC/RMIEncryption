@@ -1,4 +1,4 @@
-package ie.gmit.sw;
+package ie.gmit.cipher;
 
 public class KeyEnumerator {
 	// scores are not working
@@ -16,7 +16,7 @@ public class KeyEnumerator {
 			if (key[i] =='Z'){
 				if (i == 0) return null;
 				key[i] = 'A';
-			}else{
+			}else{ 
 				key[i]++;
 				break;
 			}

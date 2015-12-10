@@ -1,4 +1,4 @@
-package ie.gmit.sw;
+package ie.gmit.cipher;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;

@@ -1,8 +1,8 @@
-package ie.gmit.sw.client;
+package ie.gmit.client;
 
 import java.rmi.Naming;
 
-import ie.gmit.sw.VigenereBreaker;
+import ie.gmit.cipher.VigenereBreaker;
 
 public class Client {
 	public static void main(String[] args) throws Exception {
