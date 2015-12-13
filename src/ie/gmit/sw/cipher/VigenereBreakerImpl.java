@@ -14,11 +14,10 @@ public class VigenereBreakerImpl extends UnicastRemoteObject implements Vigenere
 		breaker = new KeyEnumerator();
 		vigenere = new Vigenere();
 		// UnicastRemoteObject.exportObject(this);
-
 	}
 
 	@Override
-	public String[] decrypt(String cipherText, int maxKeyLength) throws RemoteException {
+	public String[] crack(String cipherText, int maxKeyLength) throws RemoteException {
 		return breaker.crackCipher(cipherText, maxKeyLength);
 	}
 
@@ -26,6 +25,12 @@ public class VigenereBreakerImpl extends UnicastRemoteObject implements Vigenere
 	public String encrypt(String plainText, String key) throws RemoteException {
 		vigenere.setKey(key);
 		return vigenere.doCipher(plainText, true);
+	}
+
+	@Override
+	public String decrypt(String cipherText, String key) throws RemoteException {
+		vigenere.setKey(key);
+		return vigenere.doCipher(cipherText, false);
 	}
 
 }
