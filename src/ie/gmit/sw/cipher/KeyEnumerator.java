@@ -3,7 +3,7 @@ package ie.gmit.sw.cipher;
 public class KeyEnumerator {
 	private Vigenere cipher;
 	private QuadgramMap map = null;
-	private float bestScore = -999.99f;
+	private float bestScore = -1f;
 	private String bestKeyWord;
 
 	public KeyEnumerator() throws Exception {
@@ -57,10 +57,18 @@ public class KeyEnumerator {
 
 		String[] data = { mostEnglishWord, bestKeyWord };
 
+		resetVars();
+		
 		return data;
 	}
 
-	public static void main(String[] args) throws Exception {
-		new KeyEnumerator().crackCipher("JNORDDBENCAWUINQMZWTVAIVWINV", 3);
+	private void resetVars() {
+		// reset data
+		bestKeyWord = null;
+		bestScore = -1f;
 	}
+
+//	public static void main(String[] args) throws Exception {
+//		new KeyEnumerator().crackCipher("JNORDDBENCAWUINQMZWTVAIVWINV", 3);
+//	}
 }

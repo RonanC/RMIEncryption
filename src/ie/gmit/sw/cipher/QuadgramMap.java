@@ -92,7 +92,7 @@ public class QuadgramMap {
 		}
 	}
 
-	public static void main(String[] args) throws Exception {
-		new QuadgramMap("./WarAndPeace-Tolstoy.txt");
-	}
+//	public static void main(String[] args) throws Exception {
+//		new QuadgramMap("./WarAndPeace-Tolstoy.txt");
+//	}
 }
