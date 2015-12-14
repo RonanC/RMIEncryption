@@ -3,7 +3,7 @@
 ###### Java RMI program that contains encrypt, decrypt and crack methods for the Vigenère cipher
 **by Ronan Connolly**  
 
-![Cipher Header](https://github.com/RonanC/RMIEncryption/misc-resources/cipher-header.jpg "Cipher Header")
+![Cipher Header](https://github.com/RonanC/RMIEncryption/blob/master/misc-resources/cipher-header.jpg "Cipher Header")
 
 Contents:
 ---------
