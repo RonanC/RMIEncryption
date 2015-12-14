@@ -9,12 +9,11 @@ Contents:
 ---------
 1. About
 2. Structure
-3. Extra Features
-4. Tools & Environment used
-5. Installation
-6. Future Features
-7. References
-8. Team
+3. Tools & Environment used
+4. Installation
+5. Future Features
+6. References
+7. Team
   
 1 - About
 ---
@@ -78,47 +77,15 @@ It is located here:
 * TaskConsumer
 * TaskProducer
 * TaskType
-
-3 -  Extra Features
----
-
-I will now list all the extra features I added.
-
-##RmiEncrypter
-####ie.gmit.sw.cipher:  
-##### KeyEnumerator
-##### QuadgramMap
-##### Vigenere
-##### VigenereBreaker
-##### VigenereBreakerImpl
-
-####ie.gmit.sw.server:  
-##### CipherService
- 
-####ie.gmit.sw.tests:  
-##### TestVigenereBreakerImpl
   
-  
-##RmiCipherWebApp
-####ie.gmit.sw.cipher:  
-#####VigenereBreaker (interface)
-
-####ie.gmit.sw.runner:  
-##### CrackerHandler
-##### Result
-##### Task
-##### TaskConsumer
-##### TaskProducer
-##### TaskType
-  
-4 - Tools & Environment used
+3 - Tools & Environment used
 ---
  - Created the web and normal project in Java with the Eclipse EE IDE
  - Angular (form validation)
  - Bootstrap (styling)
  - Deployed to Apache Tomcat via Digital Ocean
   
-5 - Installation
+4 - Installation
 ---
 ### Dependencies  
 In order to allow the jar to be exectuable do the following: (unix)
@@ -141,20 +108,20 @@ Next run the script
 ## deploy the web app
 Drag the war file into the tomcat webapps folder while tomcat is running
 
-6 - Future Features
+5 - Future Features
 ---
-###Check old Task number
+####Check old Task number
 You could come back at a later time with a task number or code to bring up your result.
 
 
-7 - References
+6 - References
 ---
 - Servlets (http://www.javatpoint.com/servlet-tutorial)
 - JSP (http://www.javatpoint.com/jsp-tutorial)
 - Blocking Queues (http://tutorials.jenkov.com/java-util-concurrent/blockingqueue.html)
 - Multi-Threading (http://stackoverflow.com/questions/2854812/how-to-set-a-infinite-loop-and-break-it-java-threads)
   
-8 - Team
+7 - Team
 ---
 This project was created by Ronan Connolly.
 Software Development student in fourth year, term 1, GMIT  
