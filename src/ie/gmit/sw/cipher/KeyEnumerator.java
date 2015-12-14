@@ -1,7 +1,10 @@
 package ie.gmit.sw.cipher;
 
+// goes through each character in the given text and parses out any non character text (spaces, punctuation)
+// calculates a score for a given key based on quadgrams in the quadgram map
+
 public class KeyEnumerator {
-	private Vigenere cipher;
+	// private Vigenere cipher;
 	private QuadgramMap map = null;
 	private float bestScore = -1f;
 	private String bestKeyWord;
@@ -58,7 +61,7 @@ public class KeyEnumerator {
 		String[] data = { mostEnglishWord, bestKeyWord };
 
 		resetVars();
-		
+
 		return data;
 	}
 
@@ -68,7 +71,7 @@ public class KeyEnumerator {
 		bestScore = -1f;
 	}
 
-//	public static void main(String[] args) throws Exception {
-//		new KeyEnumerator().crackCipher("JNORDDBENCAWUINQMZWTVAIVWINV", 3);
-//	}
+	// public static void main(String[] args) throws Exception {
+	// new KeyEnumerator().crackCipher("JNORDDBENCAWUINQMZWTVAIVWINV", 3);
+	// }
 }

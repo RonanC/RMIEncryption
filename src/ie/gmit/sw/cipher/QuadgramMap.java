@@ -3,6 +3,10 @@ package ie.gmit.sw.cipher;
 import java.util.*;
 import java.io.*;
 
+// This class reads in and parses war and peace in quadgrams.
+// we can easily pick a different file
+// *I am not importing a quadgrams.txt file
+
 public class QuadgramMap {
 	private Map<String, Integer> map = new HashMap<String, Integer>();
 	// maps an object
@@ -92,7 +96,7 @@ public class QuadgramMap {
 		}
 	}
 
-//	public static void main(String[] args) throws Exception {
-//		new QuadgramMap("./WarAndPeace-Tolstoy.txt");
-//	}
+	// public static void main(String[] args) throws Exception {
+	// new QuadgramMap("./WarAndPeace-Tolstoy.txt");
+	// }
 }

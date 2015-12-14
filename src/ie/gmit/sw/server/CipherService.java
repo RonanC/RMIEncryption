@@ -13,12 +13,12 @@ public class CipherService {
 	public static void main(String[] args) {
 		startService();
 	}
-	
+
 	private static boolean startService() {
 		try {
 			final int PORT = 1099;
 			VigenereBreaker vb = new VigenereBreakerImpl();
-			
+
 			System.out.println("\nstarting remote service...");
 			try {
 				LocateRegistry.createRegistry(PORT);
@@ -31,7 +31,7 @@ public class CipherService {
 			}
 
 			System.out.println("service started...\n");
-			
+
 			return true;
 		} catch (Exception e) {
 			System.out.println(e);

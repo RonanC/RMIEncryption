@@ -2,7 +2,8 @@ package ie.gmit.sw.cipher;
 
 // the key and the plain text will be converted to upper case and white space is trimmed.
 
-// this is the 
+// this class is used for encrypting and decrypting text
+
 public class Vigenere { // Blaise de Vigenere is (incorrectly) accredited with
 						// inventing this encryption mechanism
 	private char[] key; // Store the cypher key as a char array for convenience
@@ -130,7 +131,7 @@ public class Vigenere { // Blaise de Vigenere is (incorrectly) accredited with
 	public String doCipher(char[] text, boolean encrypt) {
 		StringBuffer buffer = new StringBuffer();
 		int j = 0;
-		
+
 		for (int i = 0; i < text.length; i++) {
 			// we don't check punctuation, only A to Z
 			// A = 65
@@ -148,23 +149,25 @@ public class Vigenere { // Blaise de Vigenere is (incorrectly) accredited with
 				j = 0; // or j = j % key.length
 
 			// sends in the letter with it's corresponding Caesar key
-			if (encrypt) {				// Caesar part
+			if (encrypt) { // Caesar part
 				// encrypt
 				buffer.append(getEncryptedCharacter(key[j], text[i]));
-			} else {				// Caesar part
+			} else { // Caesar part
 				// decrypt
 				buffer.append(getDecryptedCharacter(key[j], text[i]));
 			}
 			j++;
 		}
-		
+
 		// too many logs when you run crack:
-//		if (encrypt) {
-//			System.out.println("encrypted the word: " + text.toString() + ", with the keyword: " + key.toString() + ", result: " + buffer.toString());
-//		}else{
-//			System.out.println("decrypted the word: " + text.toString() + ", with the keyword: " + key.toString() + ", result: " + buffer.toString());
-//		}
-		
+		// if (encrypt) {
+		// System.out.println("encrypted the word: " + text.toString() + ", with
+		// the keyword: " + key.toString() + ", result: " + buffer.toString());
+		// }else{
+		// System.out.println("decrypted the word: " + text.toString() + ", with
+		// the keyword: " + key.toString() + ", result: " + buffer.toString());
+		// }
+
 		return buffer.toString();
 	}
 
@@ -173,12 +176,12 @@ public class Vigenere { // Blaise de Vigenere is (incorrectly) accredited with
 		return doCipher(text, encrypt);
 	}
 
-//	public static void main(String[] args) {
-//		Vigenere v = new Vigenere("JAV");
-//		String cipherTxt = v.doCipher("ANTIDISESTABLISHMENTARIANISM", true);
-//		System.out.println(cipherTxt);
-//
-//		String plainTxt = v.doCipher(cipherTxt, false);
-//		System.out.println(plainTxt);
-//	}
+	// public static void main(String[] args) {
+	// Vigenere v = new Vigenere("JAV");
+	// String cipherTxt = v.doCipher("ANTIDISESTABLISHMENTARIANISM", true);
+	// System.out.println(cipherTxt);
+	//
+	// String plainTxt = v.doCipher(cipherTxt, false);
+	// System.out.println(plainTxt);
+	// }
 }
